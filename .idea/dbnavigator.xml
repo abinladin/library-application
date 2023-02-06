@@ -654,4 +654,7 @@ create table book_author(
       </environment>
     </general-settings>
   </component>
+  <component name="DBNavigator.Project.StatementExecutionManager">
+    <execution-variables />
+  </component>
 </project>
