@@ -44,6 +44,8 @@ public class BookController {
 
         bookArrayList.add(book);
 
+        SignalDB.execute(String.format("insert into books values(\"%s\",\"%s\",\"%s\");", book.getTitle(), book.getAuthor(), book.getPublisher()));
+
         titleField.clear();
         authorField.clear();
         publisher.clear();

@@ -6,16 +6,16 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class SignalDB {
+    private static SignalDB instance = new SignalDB();
+    private SignalDB(){};
     private static Connection con = null;
-    public static Connection getConnection(){
-        if (con != null) return con;
-
+    public static void execute(String query){
         try {
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/library", "abinladin", "");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/library", "abinladin", "");
+            con.createStatement().executeUpdate(query);
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return con;
     }
 
 }
