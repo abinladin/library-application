@@ -6,7 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
-
+import java.sql.*;
 
 public class BookController {
 
@@ -43,6 +43,18 @@ public class BookController {
         System.out.println("Edition: " + book.getEdition());
 
         bookArrayList.add(book);
+
+
+       try {
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/library", "abinladin", "");
+            Statement statement = con.createStatement();
+
+            String query = String.format("insert into books values(\"%s\",\"%s\",\"%s\");", book.getTitle(), book.getAuthor(), book.getPublisher());
+            statement.executeUpdate(query);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
         titleField.clear();
         authorField.clear();
