@@ -2,8 +2,10 @@ package abinladin.libraryapplication;
 
 import java.util.ArrayList;
 
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import java.sql.*;
@@ -19,8 +21,13 @@ public class BookController {
     public TextField edition;
     public TextField ISBN;
 
+    public ChoiceBox format;
     public Button submit;
 
+    @FXML
+    private void fillButtonFormat(){
+        format.setItems(FXCollections.observableArrayList("Hardcover", "Softcover", "Audiobook"));
+    }
 
     @FXML
     private void buttonAddBook(){

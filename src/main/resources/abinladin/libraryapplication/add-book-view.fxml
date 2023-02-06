@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -9,7 +10,7 @@
 
 <AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="abinladin.libraryapplication.BookController">
    <children>
-      <Button fx:id="submit" layoutX="222.0" layoutY="279.0" mnemonicParsing="false" onAction="#buttonAddBook" text="Submit" />
+      <Button fx:id="submit" layoutX="218.0" layoutY="313.0" mnemonicParsing="false" onAction="#buttonAddBook" text="Submit" />
       <TextField fx:id="titleField" layoutX="176.0" layoutY="117.0" prefHeight="27.0" prefWidth="149.0" promptText="Title" />
       <TextField fx:id="authorField" layoutX="176.0" layoutY="142.0" prefHeight="27.0" prefWidth="149.0" promptText="Author" />
       <TextField fx:id="publisher" layoutX="176.0" layoutY="192.0" prefHeight="25.0" prefWidth="149.0" promptText="Publisher" />
@@ -22,5 +23,6 @@
          </font>
       </Text>
       <Button fx:id="printbook" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#printStoredBooks" text="Debug print book" />
+      <ChoiceBox fx:id="format" layoutX="176.0" layoutY="267.0" onMouseClicked="#fillButtonFormat" prefWidth="150.0" />
    </children>
 </AnchorPane>
