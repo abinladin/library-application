@@ -14,6 +14,7 @@ public class SignalDB {
         try {
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/library", "abinladin", "");
             con.createStatement().executeUpdate(query);
+            con.close();
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -24,8 +25,8 @@ public class SignalDB {
         ResultSet rs = null;
         try{
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/library", "abinladin", "");
-            PreparedStatement pst = con.prepareStatement(query);
-            rs = pst.executeQuery();
+            rs = con.createStatement().executeQuery(query);
+
         } catch (SQLException e){
             e.printStackTrace();
         }

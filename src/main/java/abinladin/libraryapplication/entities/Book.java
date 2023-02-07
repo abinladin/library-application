@@ -31,8 +31,12 @@ public class Book {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public int setTitle(String title) {
+        if (title != null){
+            this.title = title;
+            return 0;
+        }
+        return 1;
     }
 
     public String getAuthor() {
@@ -52,24 +56,36 @@ public class Book {
         return publicationDate;
     }
 
-    public void setPublicationDate(LocalDate publicationDate) {
-        this.publicationDate = publicationDate;
+    public int setPublicationDate(LocalDate publicationDate) {
+        if (publicationDate != null){
+            this.publicationDate = publicationDate;
+            return 0;
+        }
+        return 1;
     }
 
     public String getPublisher() {
         return publisher;
     }
 
-    public void setPublisher(String publisher) {
-        this.publisher = publisher;
+    public int setPublisher(String publisher) {
+        if (publisher != null) {
+            this.publisher = publisher;
+            return 0;
+        }
+        return 1;
     }
 
     public String getEdition() {
         return edition;
     }
 
-    public void setEdition(String edition) {
-        this.edition = edition;
+    public int setEdition(String edition) {
+        if (edition != null) {
+            this.edition = edition;
+            return 0;
+        }
+        return 1;
     }
 
     public String getISBN() {

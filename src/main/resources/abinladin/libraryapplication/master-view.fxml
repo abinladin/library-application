@@ -8,11 +8,11 @@
     <Tab text="Add Book">
         <fx:include fx:id="addbooktab" source="add-book-view.fxml" />
     </Tab>
-    <Tab text="Issue Book" >
-      <fx:include fx:id="issuebooktab" source="issue-book-view.fxml"/>
-    </Tab>
       <Tab text="Remove Book">
         <fx:include fx:id="removebooktab" source="remove-book-view.fxml" />
       </Tab>
+    <Tab text="Issue Book">
+      <fx:include fx:id="issuebooktab" source="issue-book-view.fxml" />
+    </Tab>
   </tabs>
 </TabPane>
