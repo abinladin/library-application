@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="550.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+  <tabs>
+    <Tab text="Add Book">
+        <fx:include fx:id="addbooktab" source="add-book-view.fxml" />
+    </Tab>
+    <Tab text="Issue Book" >
+      <fx:include fx:id="issuebooktab" source="issue-book-view.fxml"/>
+    </Tab>
+      <Tab text="Remove Book">
+        <fx:include fx:id="removebooktab" source="remove-book-view.fxml" />
+      </Tab>
+  </tabs>
+</TabPane>
